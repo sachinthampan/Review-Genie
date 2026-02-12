@@ -56,7 +56,7 @@ const App: React.FC = () => {
       }, ...prev].slice(0, 5)); // Keep last 5
       
     } catch (err) {
-      setError("Something went wrong. Please check your API configuration.");
+      setError("Something went wrong. Please check your configuration.");
     } finally {
       setLoading(false);
     }
@@ -73,7 +73,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen pb-20 bg-slate-50">
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -115,7 +115,7 @@ const App: React.FC = () => {
                     value={businessName}
                     onChange={(e) => setBusinessName(e.target.value)}
                     placeholder="e.g. Blue Bottle Coffee, Central Park"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
                   />
                 </div>
 
@@ -186,7 +186,7 @@ const App: React.FC = () => {
                     value={additionalDetails}
                     onChange={(e) => setAdditionalDetails(e.target.value)}
                     placeholder="e.g. The barista was super friendly, but the table was a bit wobbly."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all resize-none"
                   />
                 </div>
               </div>
@@ -284,7 +284,7 @@ const App: React.FC = () => {
 
       {/* Footer Branding */}
       <footer className="max-w-7xl mx-auto px-4 text-center mt-12 mb-8 text-slate-400 text-sm">
-        <p>© {new Date().getFullYear()} Review Genie • Powered by Gemini AI</p>
+        <p>© {new Date().getFullYear()} Review Genie • AI-Powered Reviews</p>
       </footer>
     </div>
   );
